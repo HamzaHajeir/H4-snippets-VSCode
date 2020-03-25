@@ -11,7 +11,7 @@
     },
     "Circular":{
         "prefix": ["circular","Circular"],
-        "body": "h4gm.Circular(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t&{5,3},//stages\n\t$0\n)",
+        "body": "h4gm.Circular(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t${5:3},//stages\n\t$0\n)",
         "description": "H4 GPIO Circular function"
     },
 	"Debounced": {
@@ -36,7 +36,7 @@
 	},
 	"EncoderAuto":{
         "prefix": ["EncoderAuto","ea","encoder-auto"],
-		"body": "h4gm.EncoderAuto(${1:pinA},\n\t${2:pinB},\n\t${3|INPUT,INPUT_PULLUP|},\n\t${4|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${5,0},//Minimum value\n\t${6,100},//Maximum value\n\t${7,50}//Initial value,\n\t${8,1},//Increment/decrement step\n\t$0\n//Event functin or int& variable)",
+		"body": "h4gm.EncoderAuto(${1:pinA},\n\t${2:pinB},\n\t${3|INPUT,INPUT_PULLUP|},\n\t${4|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${5:0},//Minimum value\n\t${6:100},//Maximum value\n\t${7:50}//Initial value,\n\t${8:1},//Increment/decrement step\n\t$0\n//Event functin or int& variable\n)",
 		"description" : "H4 GPIO EncoderAuto function"
 	},
 	"Filtered":{
@@ -56,7 +56,7 @@
 	},
 	"MultiStage" : {
 		"prefix": ["MultiStage","Multi-Stage","stage"],
-		"body": ["h4gm.MultiStage(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t{\n\t\t{${5:0},${6:shorty}},//any press less than ${7:2000} ms: calls 'shorty' function\n\t\t{${7:2000},${8:mediumy}},//up-to ${10:5000} ms: calls 'mediumy'\n\t\t{${10:5000},${11:lengthy}},//up to ${10:5000} ms: call 'lengthy'\n\t}${12:progress},//Function called whenever a stage limit has passed\n\t\n)"],
+		"body": ["h4gm.MultiStage(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t{\n\t\t{${5:0},${6:shorty}},//any press less than ${7:2000} ms: calls 'shorty' function\n\t\t{${7:2000},${8:mediumy}},//up-to ${10:5000} ms: calls 'mediumy'\n\t\t{${10:5000},${11:lengthy}},//over ${10:5000} ms: call 'lengthy'\n\t}${12:progress}//Function called whenever a stage limit has passed\n\t\n)"],
 		"description": "H4 GPIO MultiStage function"
 	},
 	"Output":{
