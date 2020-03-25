@@ -1,0 +1,184 @@
+{	
+    "AnalogThreshold": {
+        "prefix": ["analogthreshold"],
+        "body": "h4gm.AnalogThreshold(${1:pin},\n\t${2:freq},\n\t${3:threshold},\n\t$4,\n\t$0\n)",
+        "description":"H4 GPIO Analog Threshold Function"
+    },
+    "AnalogThresholdThing": {
+        "prefix": ["analogthresholdthing"],
+        "body": "h4gm.AnalogThresholdThing(${1:pin},\n\t${2:freq},\n\t${3:threshold},\n\t$4,\n\t$0\n)",
+        "description":"H4 GPIO Analog Threshold Thing Function"
+    },
+    "Circular":{
+        "prefix": ["circular","Circular"],
+        "body": "h4gm.Circular(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t&{5,3},//stages\n\t$0\n)",
+        "description": "H4 GPIO Circular function"
+    },
+	"Debounced": {
+		"prefix": ["debounced", "Debounced", "db"],
+		"body": "h4gm.Debounced(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t$0\n)",
+		"description": "H4 GPIO Debounced function"
+	},
+	"DebouncedThing": {
+		"prefix": ["debouncedthing", "DebouncedThing", "dbt"],
+		"body": "h4gm.DebouncedThing(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t$0//binary thing\n)",
+		"description": "H4 GPIO DebouncedThing function"
+	},
+	"Encoder":{
+        "prefix": ["Encoder","encoder"],
+		"body": "h4gm.Encoder(${1:pinA},\n\t${2:pinB},\n\t${3|INPUT,INPUT_PULLUP|},\n\t${4|ACTIVE_HIGH,ACTIVE_LOW|},\n\t$0\n//Event functin or int& variable\n)",
+		"description": "H4 GPIO Encoder function"
+	},
+	"EncoderThing":{
+        "prefix": ["EncoderThing","encoderthing"],
+		"body": "h4gm.EncoderThing(${1:pinA},\n\t${2:pinB},\n\t${3|INPUT,INPUT_PULLUP|},\n\t${4|ACTIVE_HIGH,ACTIVE_LOW|},\n\t$0\n//H4P_BinaryThing*\n)",
+		"description": "H4 GPIO EncoderThing function"
+	},
+	"EncoderAuto":{
+        "prefix": ["EncoderAuto","ea","encoder-auto"],
+		"body": "h4gm.EncoderAuto(${1:pinA},\n\t${2:pinB},\n\t${3|INPUT,INPUT_PULLUP|},\n\t${4|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${5,0},//Minimum value\n\t${6,100},//Maximum value\n\t${7,50}//Initial value,\n\t${8,1},//Increment/decrement step\n\t$0\n//Event functin or int& variable)",
+		"description" : "H4 GPIO EncoderAuto function"
+	},
+	"Filtered":{
+        "prefix": ["Filtered","filtered"],
+		"body": "h4gm.Filtered(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t//{3|ACTIVE_HIGH,ACTIVE_LOW|}\n\t${4|ON,OFF|},//Pass ${4|ON,OFF|} transition \n\t$0\n)",
+		"description": "H4 GPIO Filtered function"
+	},
+	"Latching" : {
+		"prefix": ["Latching","latching"],
+		"body": "h4gm.Latching(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t$0\n)",
+		"description": "H4 GPIO Latching function"
+	},
+	"LatchingThing" : {
+		"prefix": ["LatchingThing","latchingthing"],
+		"body": "h4gm.LatchingThing(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t$0\n)",
+		"description": "H4 GPIO LatchingThing function"
+	},
+	"MultiStage" : {
+		"prefix": ["MultiStage","Multi-Stage","stage"],
+		"body": ["h4gm.MultiStage(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t{\n\t\t{${5:0},${6:shorty}},//any press less than ${7:2000} ms: calls 'shorty' function\n\t\t{${7:2000},${8:mediumy}},//up-to ${10:5000} ms: calls 'mediumy'\n\t\t{${10:5000},${11:lengthy}},//up to ${10:5000} ms: call 'lengthy'\n\t}${12:progress},//Function called whenever a stage limit has passed\n\t\n)"],
+		"description": "H4 GPIO MultiStage function"
+	},
+	"Output":{
+		"prefix": ["Output","output"],
+		"body": "h4gm.Output(${1:pin},\n\t${2|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${3|ON,OFF|},//Starts in ${3|ON,OFF|} state\n\t$0\n)",
+		"description": "H4 GPIO Output function"
+	},
+	"Polled": {
+		"prefix": "Polled",
+		"body": "h4gm.Polled(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:5000},//Check pin every ${4:5000} ms\n\t${5:false},//analog pin = ${5:false}\n\t$0\n)",
+		"description": "H4 GPIO Polled function"	
+	},
+	"PolledThing": {
+		"prefix": ["PolledThing","polledthing"],
+		"body": "h4gm.PolledThing(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:5000},//Check pin every ${4:5000} ms\n\t${5:false},//analog pin = ${5:false}\n\t$0\n)",
+		"description": "H4 GPIO PolledThing function"	
+	},
+	"Raw":{
+		"prefix": "Raw",
+		"body": "h4gm.Raw(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t$0\n)",
+		"description": "H4 GPIO Raw function"
+	},
+	"RawThing":{
+		"prefix": ["RawThing","rawthing"],
+		"body": "h4gm.RawThing(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t$0\n)",
+		"description": "H4 GPIO RawThing function"
+	},
+	"Repeating" : {
+		"prefix": ["Repeating","repeating"],
+		"body": "h4gm.Repeating(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t,${5:1000} //Call function every ${5:1000} ms the button held\n\t$0\n)",
+		"description": "H4 GPIO Repeating function"
+	},
+	"Retriggering": {
+		"prefix": ["Retriggering","retriggering"],
+		"body": "h4gm.Retriggering(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:10000},//timeout\n\t$0\n)",
+		"description": "H4 GPIO Retriggering function"
+	},
+	"RetriggeringThing": {
+		"prefix": ["RetriggeringThing","retriggeringthing"],
+		"body": "h4gm.RetriggeringThing(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:10000},//timeout\n\t$0\n)",
+		"description": "H4 GPIO RetriggeringThing function"
+    },
+    "Sequenced" : {
+		"prefix": ["Sequenced","sequenced"],
+		"body": "h4gm.Sequenced(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t$0\n)",
+		"description": "H4 GPIO Sequenced function"
+	},
+	"Timed" : {
+		"prefix": "Timed",
+		"body": "h4gm.Timed(${1:pin},\n\t${2|INPUT,INPUT_PULLUP|},\n\t${3|ACTIVE_HIGH,ACTIVE_LOW|},\n\t${4:15},//Debounce time in ${4:15} ms\n\t$0\n)",
+		"description": "H4 GPIO Timed function"
+    },
+    
+
+	"H4 every" :{
+		"prefix": "every",
+		"body": "h4.every(${1:1000},//call below void function every ${1:1000} ms\n\t$0\n)",
+		"description": "H4 every function"
+	},
+	"H4 everyRandom" : {
+		"prefix": ["everyRandom","er"],
+		"body": "h4.everyRandom(${1:1000},//Random minimum time\n\t${2:2000},//Random maximum time\n\t$0\n)",
+		"description": "H4 everyRandom function"
+	},
+	"H4 nTimes" : {
+		"prefix": "nTimes",
+		"body": "h4.nTimes(${1:5},//Times\n\t${2:200},//Interval time in ms\n\t$0\n)",
+		"description": "H4 nTimes function"
+	},
+	"H4 nTimesRandom" : {
+		"prefix": "nTimesRandom",
+		"body": "h4.nTimesRandom(${1:4},//Times\n\t${2:500},//Minimum interval time in ms\n\t${3:1500},//Maximum interval time in ms\n\t$0\n)",
+		"description": "H4 nTimesRandom function"
+	},
+	"H4 once" :{
+		"prefix": "once",
+		"body": "h4.once(${1:1000},//call below function once after ${1:1000} ms\n\t$0\n)",
+		"description": "H4 once function"
+	},
+	"H4 onceRandom" : {
+		"prefix": "onceRandom",
+		"body": "h4.onceRandom(${1:1000},//Random minimum in ms\n\t${2:2000},//Rmax in ms\n\t$0\n)",
+		"description": "H4 onceRandom function"
+	},
+	"H4 randomTimes" : {
+		"prefix": "randomTimes",
+		"body": "h4.randomTimes(${1:2},//Nmin times\n\t${2:5},//Nmax times\n\t${3:1500},$0\n)",
+		"description": "H4 randomTimes function"
+	},
+	"H4 randomTimesRandom" :{
+		"prefix": "randomTimesRandom",
+		"body": "h4.randomTimesRandom(${1:2},//Nmin times\n\t${2:5},//Nmax times\n\t${3:500},//Minimum random interval time in ms\n\t${4:1500},//Maximum random interval time in ms\n\t$0\n)",
+		"description": "H4 randomTimesRandom function"
+	},
+	"H4 repeatWhile" : {
+		"prefix": ["repeatWhile","while"],
+		"body": "h4.repeatWhile($1,//Condition function returns a bool\n\t${2:1000},//repeat next function every ${2:1000} ms\n\t$3,//Function to be repeated (void function(void))\n\t${0:nullptr}  //Lift off Function (after the condition returns false)\n)",
+		"description": "H4 repeatWhile function"
+	},
+	"H4 repeatWhileEver" : {
+		"prefix": ["rwe","repeat while ever"],
+		"body": "h4.repeatWhileEver($1,//Condition function returns a bool\n\t${2:1000},//repeat next function every ${2:1000} ms\n\t$3,//Function to be repeated (void function(void))\n\t${0:nullptr}  //Lift off Function (after the condition returns false)\n)",
+		"description": "H4 repeatWhileEver function"
+	}
+	
+
+
+
+    ,"H4GM callback Function" :{
+        "prefix": ["gcb","gpiocb", "gpio function"],
+        "body": "[](H4GPIOPin* ptr){\n\tH4GM_PIN(${1|AnalogThreshold,AnalogThresholdThing,Circular,Debounced,DebouncedThing,Encoder,EncoderThing,EncoderAuto,Filtered,Latching,LatchingThing,Multistage,Output,Polled,PolledThing,Raw,RawThing,Repeating,Retriggering,RetriggeringThing,Sequenced,Timed|); //Create the currect gpio function\n\t$0\n}",
+        "description":"H4 GPIO EVENT callback"
+    },
+
+	"H4 Void Function" :{
+		"prefix": ["void function","vf"],
+		"body": "[](){\n\t$0\n}",
+		"description": "H4 void Function"
+	}
+
+
+    
+
+	
+}
