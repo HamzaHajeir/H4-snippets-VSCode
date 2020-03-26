@@ -5,6 +5,8 @@ H4/H4Plugins made it easier for one to program ESP8266, ESP32, Raspberry Pi and 
 And this extension Makes the life easier and coding faster with H4/H4Plugins framework.
 
 
+![H4 Workflow](images/H4-Snippets.gif)
+
 ## Features
 
 Auto-completion code and ready-snippets to work with H4 functions and their own parameters.
@@ -23,7 +25,8 @@ Add H4 framework :
 
 ## Release Notes
 
+### 0.0.2
+Fix GPIO Callback
 
 ### 0.0.1
-
 Initial release of H4 snippets for vscode.
