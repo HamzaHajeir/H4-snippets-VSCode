@@ -167,7 +167,7 @@
 
     ,"H4GM callback Function" :{
         "prefix": ["gcb","gpiocb", "gpio function"],
-        "body": "[](H4GPIOPin* ptr){\n\tH4GM_PIN(${1|AnalogThreshold,AnalogThresholdThing,Circular,Debounced,DebouncedThing,Encoder,EncoderThing,EncoderAuto,Filtered,Latching,LatchingThing,Multistage,Output,Polled,PolledThing,Raw,RawThing,Repeating,Retriggering,RetriggeringThing,Sequenced,Timed|); //Create the currect gpio function\n\t$0\n}",
+        "body": "[](H4GPIOPin* ptr){\n\tH4GM_PIN(${1|AnalogThreshold,AnalogThresholdThing,Circular,Debounced,DebouncedThing,Encoder,EncoderThing,EncoderAuto,Filtered,Latching,LatchingThing,Multistage,Output,Polled,PolledThing,Raw,RawThing,Repeating,Retriggering,RetriggeringThing,Sequenced,Timed|}); //Create the currect gpio function\n\t$0\n}",
         "description":"H4 GPIO EVENT callback"
     },
 
