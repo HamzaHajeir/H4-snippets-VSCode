@@ -2,7 +2,7 @@
     "name": "h4-snippets",
     "displayName": "H4 Snippets",
     "description": "Snippets for H4/H4Plugins",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "HamzaHaj",
     "engines": {
         "vscode": "^1.39.0"
