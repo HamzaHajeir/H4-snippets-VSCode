@@ -13,7 +13,7 @@ Auto-completion code and ready-snippets to work with H4 functions and their own 
 
 Also supports H4/H4Plugins callback function types
 
-![H4P Basics Snippets](images\H4PBasics-Snippets.gif)
+![H4P Basics Snippets](images/H4PBasics-Snippets.gif)
 
 ## Requirements
 
