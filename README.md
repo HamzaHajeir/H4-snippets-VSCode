@@ -13,7 +13,7 @@ Auto-completion code and ready-snippets to work with H4 functions and their own 
 
 Also supports H4/H4Plugins callback function types
 
-
+![H4P Basics Snippets](images\H4PBasics-Snippets.gif)
 
 ## Requirements
 
@@ -24,6 +24,10 @@ Add H4 framework :
 
 
 ## Release Notes
+
+### 0.1.0
+Update existing snippets due to H4P version 0.5.5
+Add H4Basic Constructor
 
 ### 0.0.2
 Fix GPIO Callback
