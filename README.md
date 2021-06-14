@@ -5,6 +5,7 @@ H4/H4Plugins made it easier for one to program ESP8266, ESP32, Raspberry Pi and 
 And this extension Makes the life easier and coding faster with H4/H4Plugins framework.
 
 
+An explanatory image (It's not true in details for the newer version)
 ![H4 Workflow](images/H4-Snippets.gif)
 
 ## Features
