@@ -25,6 +25,8 @@ Add H4 framework :
 
 
 ## Release Notes
+### 0.3.0 
+Update the snippets to the newer version of H4Plugins major release V3.0.0.  
 
 ### 0.1.0
 Update existing snippets due to H4P version 0.5.5
